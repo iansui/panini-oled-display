@@ -1,0 +1,17 @@
+# panini-oled.service
+# System stats on the Panini case OLED.
+# install.sh replaces @BIN@ with the absolute path of bin/panini-oled and writes the
+# result to ~/.config/systemd/user/. Edit this template, not the installed copy.
+
+[Unit]
+Description=Panini case OLED system stats
+
+[Service]
+Type=simple
+ExecStart="@BIN@"
+Restart=always
+RestartSec=5
+NoNewPrivileges=yes
+
+[Install]
+WantedBy=default.target
